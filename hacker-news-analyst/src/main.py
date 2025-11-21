@@ -44,12 +44,8 @@ tools = [hackernews.get_top_hackernews_stories, hackernews.get_user_details]
 agent = create_agent(
     model=model,
     name="Tech News Analyst",
-    # instructions=[INSTRUCTIONS],
     tools=tools,
     debug=True,
-    # model=Nebius(id="Qwen/Qwen3-30B-A3B", api_key=os.getenv("NEBIUS_API_KEY")),
-    # markdown=True,
-    # memory=True,  # Enable memory for context retention
     system_prompt=INSTRUCTIONS,
 )
 
@@ -72,7 +68,6 @@ def main():
         # Add timestamp to the response
         print(f"\n[{datetime.now().strftime('%H:%M:%S')}]")
         query = {"messages": [{"role": "user", "content": user_input}]}
-        # agent.print_response(user_input)
         r = agent.invoke(query)
         print(r["messages"][-1].content)
 

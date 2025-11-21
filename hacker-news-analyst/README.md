@@ -55,3 +55,6 @@ uv run src/main.py
 - "从最近的讨论中出现了哪些科技趋势？"
 - "比较本周和上周的热门故事"
 - "显示今天最有争议的故事"
+
+## 参考文献
+- https://github.com/Arindam200/awesome-ai-apps/tree/main/starter_ai_agents/agno_starter
